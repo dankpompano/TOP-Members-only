@@ -1,2 +1,12 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_with model: @user do |form| %>
+  <%= form.label :username %> <br>
+  <%= form.text_field :username, placeholder: "Edit Username here..." %> <br>
+  
+  <%= form.label :email %> <br>
+  <%= form.text_field :email, placeholder: "Edit email here..." %> <br>
+
+  <%= form.label :password %> <br>
+  <%= form.text_field :password, placeholder: "Edit password here..." %> <br>
+  
+  <%= form.submit "Submit"%>
+<% end %>
