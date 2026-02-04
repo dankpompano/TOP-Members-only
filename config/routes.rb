@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users, only: [ :new, :create, :edit, :update ]
+  resources :posts, only: [ :new, :create, :index ]
   get "posts/new"
   get "users/new"
   get "users/edit"

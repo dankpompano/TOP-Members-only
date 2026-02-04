@@ -1,2 +1,11 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Generate new post:</h1>
+<%=form_with model: @post do |form| %>
+  <%=form.label :topic %> <br>
+  <%=form.text_field :topic, placeholder: "Topic of your new post..." %> <br>
+
+  <%=form.label :body %> <br>
+  <%= form.text_area :body, rows: 10, cols: 50 %> <br>
+
+  <%= form.submit "Submit"%>
+
+<%end%>
